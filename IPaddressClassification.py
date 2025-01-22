@@ -4,14 +4,14 @@ import numpy as np
 
 #PROGRAMA DE CLASIFICACION DE OBJETOS PARA VIDEO EN DIRECCION IP 
 
-url = 'http://192.168.1.6/cam-hi.jpg'
+url = 'rtsp://192.168.0.209:554/(h264/MPEG-4)/ch(CANAL)/(main/sub)/av_stream'
 #url = 'http://192.168.1.6/'
 winName = 'ESP32 CAMERA'
 cv2.namedWindow(winName,cv2.WINDOW_AUTOSIZE)
 #scale_percent = 80 # percent of original size    #para procesamiento de imagen
 
 classNames = []
-classFile = 'coco.names'
+classFile = 'ESP32-CAM-wireless-computer-vision-objects-detection\coco.names'
 with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
